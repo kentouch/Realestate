@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<br>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-sm-5" style="padding: 40px;">
+            <h2 style="color:red;">Get in touch...</h2>
+
+            <br>
+            <!--New-form-->
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="exampleInputName1">Name</label>
+                  <input type="text" class="form-control" name='name' id="exampleInputName1" aria-describedby="emailHelp" placeholder="Enter your name">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input type="email" class="form-control" name ='email' id="exampleInputEmail1" placeholder="Enter your email">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Message</label>
+                    <textarea class="form-control" name='message' id="exampleFormControlTextarea1" rows="3" placeholder="Add your request"></textarea>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            <!--End-Form-->
+            <!--<div class="card justify-content-center" style="width:25rem;">
+
+                <div class="card-body">
+        
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label" ><b>Email address</b></label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email address">
+                    <div id="emailHelp" class="form-text" >We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"><b>Password</b></label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"><b>Message</b></label>
+                        <textarea name="message" cols="20" rows="6" class="form-control" id="exampleCheck1" placeholder="message"></textarea>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1"><b>Check me out</b></label>
+                        </div>
+                    
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+          
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+<!--<h1>Add a property</h1>
+let's make the form for adding a property-->
+
+<!--<form action="addproperty/" method="post">
+    {% csrf_token %}
+
+    Property_location:<br>
+    <input type="text" name="location" value="Location">
+    <br><br>
+    Property_status:<br>
+    <input type="text" name="status" value="Status">
+    <br><br>
+    Property_price:<br>
+    <input type="text" name="price" value="Price">
+    <br><br>
+
+    <input type="submit" name="submit">
+
+</form>-->

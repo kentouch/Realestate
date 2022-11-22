@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<br>
+
+<div class="container-fluid">
+    <div class="row justify-content-around">
+        <br>
+        <br>
+        <h2 style="text-align: center;color: red;"><span><b>Our Agents</b></span></h2>
+        <div class="col" style="padding: 20px; text-align: center;">
+            <img src="{% static 'Pic2.jpeg' %}" alt="" style="border-radius: 50%; width: 200px;
+            height: 200px;">
+            <br>
+            <br>
+            <div style="text-align: center;">
+                <span>
+                    <h5>Clark Kent</h5>
+                    <p>ruzindanakent.rk@gmail.com</p>
+                    <p>0781132084</p>
+                </span>
+            </div>
+        </div>
+        <div class="col" style="padding: 20px;text-align: center;">
+            <img src="{% static 'Pic2.jpeg' %}" alt="" style="border-radius: 50%; width: 200px;
+            height: 200px;">
+            <br>
+            <br>
+            <div style="text-align: center;">
+                <h5>Clark Kent</h5>
+                <p>ruzindanakent.rk@gmail.com</p>
+                <p>0781132084</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col">
+            {% include 'Bio.html' %}
+        </div>
+    </div>
+    <br>
+</div>
+<br>
+{% endblock %}
+
+
+
+
+
+
+
+<!--<h1>Let's update the property</h1>
+
+<form action="updateProperty/{{ new_property.id }}" method="post">
+    {% csrf_token %}
+
+    Property_location:<br>
+    <input type="text" name="location" value="{{ new_property.property_location }}">
+    <br><br>
+    Property_status:<br>
+    <input type="text" name="status" value="{{ new_property.property_status }}">
+    <br><br>
+    Property_price:<br>
+    <input type="text" name="price" value="{{ new_property.price }}">
+    <br><br>
+    <input type="submit" name="Submit">
+
+</form>-->

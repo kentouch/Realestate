@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% include 'search_form.html' %}
+<br>
+<br>
+<div class="container-fluid">
+  <div class="row justify-content-sm-center">
+    <div class="col-sm-7">
+      <div class="card-group">
+        {% if house %}
+        {% for hse in house %}
+          <div class="card" width="18rem">
+            <img src="/media/{{ hse.image_house }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3 style="color: red;">{{ hse.status }}</h3>
+              <h4 class="card-title"><small class="text-muted"></small></h4>
+              <h5 class="card-text">{{ hse.price }} RWF</h5>
+              <p class="card-text">{{ hse.location }}</p>
+              <a href="{% url 'house-detail' hse.id %}" class="btn btn-primary">More Infos</a>
+            </div>
+          </div>
+          <br>
+          <br>
+        {% endfor %}
+        {% elif car  %}
+        {% for cr in car %}
+        <div class="card" width="18rem">
+          <img src="/media/{{ cr.image_car }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 style="color: red;"> For {{ cr.status }}</h3>
+            <h4 class="card-title"><small class="text-muted"></small></h4>
+            <h5 class="card-text">{{ cr.price }}RWF/day</h5>
+            <p class="card-text">{{ cr.car_name }}</p>
+            <a href="{% url 'car-detail' cr.id %}" class="btn btn-primary">More Infos</a>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        {% endfor %}
+       {% else %}
+       {% for lnd in land %}
+       <div class="card" width="18rem">
+        <img src="/media/{{ lnd.image_land }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 style="color: red;">Taken</h3>
+          <h4 class="card-title"><small class="text-muted"></small></h4>
+          <h5 class="card-text">{{ lnd.price }} RWF</h5>
+          <p class="card-text">{{ lnd.location }}</p>
+          <a href="{% url 'land-detail' lnd.id %}" class="btn btn-primary">More Infos</a>
+        </div>
+      </div>
+      </div>
+      <br>
+      <br>
+      {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+  {% endblock %}
+
+</div>

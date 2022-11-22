@@ -1,0 +1,41 @@
+
+<table border="1">
+
+    <tr>
+        <th>ID</th>
+        <th>Location</th>
+        <th>Status</th>
+        <th>Price</th>
+    </tr>
+{% for p in propertyLocation %}
+<!--{% cycle "red" "pink" "green" as bgcolor silent %}
+<h1 style ='background-color: {{bgcolor}}'>
+</h1>-->
+<tr>
+    <td>{{ p.id }}</td>
+    <td>{{ p.property_location}}</td>
+    <td>{{ p.property_status }}</td>
+    <td>{{ p.property_price }}</td>
+    <!--<li>{{ p.property_location }}</li>
+    <li>{{ p.property_status }}</li>
+    <li>{{ p.property_price }}</li>-->
+</tr>
+{% endfor %}
+</table>
+
+
+{% comment ' These are specific and useful tags '%}
+
+This is a beautiful feature to include the same template or content
+over multiple pages 
+
+{% include 'update.html' %}
+
+
+This block tag can help to introduce other page_content to the main without many copy and paste 
+
+
+{% block theContent %}
+{% endcontent %}
+
+{% endcomment %}

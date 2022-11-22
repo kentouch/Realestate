@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid">
+  <h2 style="text-align:center; padding:20px;">Leave a comment below</h2>
+  <div class="row justify-content-center" style="padding:40px">
+
+    <br>
+    <br>
+      <!--Comment form-->
+      <div class="col-7">
+          <form action="{% url 'index' %}" method=POST>
+              {% csrf_token %}
+              {{ form.as_p }}
+              <!--<input type="submit">-->
+            <!--<div class="form-outline w-100">
+              <textarea class="form-control" id="textAreaExample" cols="140" rows="6"
+                style="background: #fff;" placeholder="Leave your comment"></textarea>
+            </div>-->
+            <!--<button type="button" class="btn btn-primary btn-sm">Post comment</button>
+            <button type="button" class="btn btn-outline-primary btn-sm">Cancel</button>-->
+            <div class="float-end mt-2 pt-1">
+              <input type="submit" class="btn btn-primary btn-sm">
+              <!--<input type="submit" class="btn btn-outline-primary btn-sm">Cancel</button>-->
+            </div>
+          </form>
+      </div>
+  </div>
+</div>
+
+{% endblock %}
