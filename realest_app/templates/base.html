@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renties</title> 
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"> 
+   <!--<style>
+    .maintxt {
+    background-image: url("{% static 'Pic1.jpg' %}");
+    background-size: auto;
+   
+    }
+
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: black;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+   
+    
+      /** Grid column **/
+
+.gallery {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%;
+}
+
+.gallery .pics {
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+}
+
+.gallery .animation {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+@media (max-width: 450px) {
+  .gallery {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    column-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn.filter {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+}
+
+/**end Grid column **/
+</style>-->
+         
+</head>
+<body style="background-color:rgb(247, 234, 234);">
+    <!--Navbar-->
+    <nav class="navbar fixed-top navbar-expand-lg bg-dark" style="opacity:60%;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}" style="font-family:'Times New Roman', Times, serif;text-align:center;color:white;">Bestrenties</a>
+        <button class="navbar-toggler" style="border-color:white;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav" style="opacity:none;">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'index' %}" style="color:white;"><b>Home</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'properties' %}" style="color:white;"><b>Properties</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}" style="color:white;"><b>About</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}" style="color:white;"><b>Contact</b></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Endnavbar-->
+
+
+<br>
+<br>
+
+{% block content %}
+{% endblock %} 
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<section id="footer" style="background-color:black ; padding-bottom: 20px;">
+	<div class="container" style="color:white;">
+	  <div class="row">
+		<div class="col-sm-7 footer_1">
+		 <p class="p_4"> <a href="detail.html">OUR SITE</a> is made for Realestate</p>
+		</div>
+		<div class="col-sm-5 footer_2">
+		 <p class="text-right">Rentator!!</p>
+		</div>
+	  </div>
+	</div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+</body>
+</html>
